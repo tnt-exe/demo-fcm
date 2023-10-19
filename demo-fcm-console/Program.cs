@@ -14,7 +14,7 @@ namespace demo_fcm_console
                     .FromJson(File.ReadAllText("fir-fcm-da2ef-firebase-adminsdk-517ao-747f868825.json"))
             });
 
-            var registrationToken = "fU9t2lfWST-abKPJC2bvPf:APA91bEHHsk1F2Pwkko7cCnx1fbUOPb9dRC5YrLtkcGM8Miogj30vviyMHgCSZIBLlOpr0h3joFU7BBx1kIcX1z_MDYFXddN1KoSwsiQN4K_8VL8wK796abw2pkLGd5Q6-f-3VYRP18_";
+            var registrationToken = "fLx0b-aFQ_CyylT8OBd9ii:APA91bFMa1pSEJHyrRZ3hLJkatjpKyl8ZnCdppRhkhanOtKJZ4r_wEqWpxFoFFlg79k7AOuSs2KJxM6a0q9DAv4uKZ21iilWLeb_vlpKaW7jhzyyNhbA7rApMtydVB-X89TQ5G2SRD2d";
 
             // See documentation on defining a message payload.
             var message = new Message()
