@@ -14,22 +14,25 @@ namespace demo_fcm_console
                     .FromJson(File.ReadAllText("fir-fcm-da2ef-firebase-adminsdk-517ao-747f868825.json"))
             });
 
-            var registrationToken = "fLx0b-aFQ_CyylT8OBd9ii:APA91bFMa1pSEJHyrRZ3hLJkatjpKyl8ZnCdppRhkhanOtKJZ4r_wEqWpxFoFFlg79k7AOuSs2KJxM6a0q9DAv4uKZ21iilWLeb_vlpKaW7jhzyyNhbA7rApMtydVB-X89TQ5G2SRD2d";
+            var deviceToken = "dptzaAI5TUS4vAnd_VjrRr:APA91bF1pcrd2hq9EcqSG1WfU0_Hoy4fYMpgI7si_zUnN9t8aRbcWFJCFQYHZAXVu4ghFUOqMxQ3YBNso2xZOkPlNeNBSTsyinst2dj5I3e-Ei_RkPdTyu2iz3dmDFQrDzTqhWo5dnl9";
 
             // See documentation on defining a message payload.
             var message = new Message()
             {
+                //push notification
                 Notification = new Notification
                 {
-                    Title = "Demo",
-                    Body = "Hello World"
+                    Title = "Demo FCM",
+                    Body = "Hello World From .NET console"
                 },
+
+                //payload data
                 Data = new Dictionary<string, string>()
                     {
                         { "score", "850" },
-                        { "time", "2:45" },
+                        { "time", DateTime.Now.ToString() },
                     },
-                Token = registrationToken,
+                Token = deviceToken,
             };
 
             // Send a message to the device corresponding to the provided
